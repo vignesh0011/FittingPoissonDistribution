@@ -33,6 +33,8 @@ The Poisson distribution is the discrete probability distribution of the number 
 ```python
 
 
+
+
 import numpy as np
 import math
 import scipy.stats
@@ -45,7 +47,7 @@ Prob=list(); E=list(); xi=list()
 print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
-    Prob.append(math.exp(-mean)*mean*x/math.factorial(x))
+    Prob.append(math.exp(-mean)*mean**x/math.factorial(x))
     E.append(Prob[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
     print("%2.2f %2.2f  %4.2f   %3.2f   %3.2f"%(x,Prob[x],f[x],E[x],xi[x]))
@@ -63,7 +65,8 @@ else:
 
 # OUTPUT: 
 
-![Screenshot (52)](https://user-images.githubusercontent.com/75234646/166290201-5894c01e-c449-4d59-a8cf-f0f72f697dd2.png)
+![exp2](https://user-images.githubusercontent.com/53014593/168961120-79d3793a-e7bc-41e9-b567-ed35ac3222ab.jpg)
+
 
 
 # RESULTS : 
